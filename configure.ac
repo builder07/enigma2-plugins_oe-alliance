@@ -575,9 +575,12 @@ permanentclock/src/Makefile
 permanentclock/src/trad/Makefile
 
 permanenttimeshift/Makefile
+permanenttimeshift/Components/Makefile
+permanenttimeshift/Components/Converter/Makefile
+permanenttimeshift/Components/Sources/Makefile
 permanenttimeshift/images/Makefile
 permanenttimeshift/meta/Makefile
-permanenttimeshift/po/Makefile
+permanenttimeshift/skin/Makefile
 permanenttimeshift/src/Makefile
 permanenttimeshift/src/createapscfiles/Makefile
 permanenttimeshift/src/eitsave/Makefile
