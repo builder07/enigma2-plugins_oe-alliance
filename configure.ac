@@ -574,6 +574,14 @@ permanentclock/po/Makefile
 permanentclock/src/Makefile
 permanentclock/src/trad/Makefile
 
+permanenttimeshift/Makefile
+permanenttimeshift/images/Makefile
+permanenttimeshift/meta/Makefile
+permanenttimeshift/po/Makefile
+permanenttimeshift/src/Makefile
+permanenttimeshift/src/createapscfiles/Makefile
+permanenttimeshift/src/eitsave/Makefile
+
 pipservicerelation/Makefile
 pipservicerelation/src/Makefile
 pipservicerelation/meta/Makefile
