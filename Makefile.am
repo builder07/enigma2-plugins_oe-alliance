@@ -61,7 +61,6 @@ SUBDIRS = \
 	orfteletext \
 	partnerbox \
 	permanentclock \
-	permanenttimeshift \
 	pipservicerelation \
 	podcast \
 	porncenter \
