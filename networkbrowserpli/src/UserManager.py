@@ -6,10 +6,11 @@ from Components.Sources.StaticText import StaticText
 from Components.Pixmap import Pixmap
 from Components.ActionMap import ActionMap
 from Components.Sources.List import List
+
 from Tools.LoadPixmap import LoadPixmap
 from Tools.Directories import resolveFilename, SCOPE_PLUGINS, SCOPE_SKIN_IMAGE
 from UserDialog import UserDialog
-import os
+from os import unlink, listdir, path as os_path
 
 class UserManager(Screen):
 	skin = """
@@ -60,7 +61,7 @@ class UserManager(Screen):
 
 	def updateList(self):
 		self.list = []
-		for file in os.listdir('/etc/enigma2'):
+		for file in listdir('/etc/enigma2'):
 			if file.endswith('.cache'):
 				if file == 'networkbrowser.cache':
 					continue
@@ -83,8 +84,9 @@ class UserManager(Screen):
 	def delete(self, returnValue = None):
 		cur = self["config"].getCurrent()
 		if cur:
-			try:
-				os.unlink('/etc/enigma2/' + cur[2].strip())
+			returnValue = cur[2]
+			cachefile = '/etc/enigma2/' + returnValue.strip()
+			if os_path.exists(cachefile):
+				unlink(cachefile)
 				self.updateList()
-			except:
-				pass
+
